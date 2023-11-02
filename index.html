@@ -10,8 +10,8 @@
     <link href="./style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/fontawesome.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.css">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:500,700&display=swap" rel="stylesheet">
 </head>
@@ -27,7 +27,7 @@
             <li class="navbar__link after-transform"><a href="#equipo">Nosotros</a></li>
             <li class="navbar__link after-transform"><a href="#">Galeria</a></li>
             <li class="navbar__link after-transform"><a href="#">Blog</a></li>
-            <li class="navbar__link after-transform"><a href="#">Contacto</a></li>
+            <li class="navbar__link after-transform"><a href="#footer">Contacto</a></li>
           </ul>
         </nav>
       </div>
@@ -35,10 +35,10 @@
     <div class="navbar-responsive">
       <ul class="navbar-responsive__nav">
         <li class="navbar-responsive__link after-transform"><a class="active" href="#">Inicio</a></li>
-        <li class="navbar-responsive__link after-transform"><a href="#">Nosotros</a></li>
+        <li class="navbar-responsive__link after-transform"><a href="#equipo">Nosotros</a></li>
         <li class="navbar-responsive__link after-transform"><a href="#">Galeria</a></li>
         <li class="navbar-responsive__link after-transform"><a href="#">Blog</a></li>
-        <li class="navbar-responsive__link after-transform"><a href="#">Contacto</a></li>
+        <li class="navbar-responsive__link after-transform"><a href="#footer">Contacto</a></li>
       </ul>
     </div>
   </div>
@@ -149,12 +149,72 @@
         <script src="./function.js"></script>
     </body>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer-section" id="footer">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <p style="font-weight: 500;">© 2023 Squash Warriors Todos los derechos reservados.</p>
+            <div class="footer-cta pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="cta-text">
+                                <h4>Encuéntranos</h4>
+                                <span>Trujillo, Perú</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fas fa-phone"></i>
+                            <div class="cta-text">
+                                <h4>Contáctame</h4>
+                                <span>+51 956487726</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="far fa-envelope-open"></i>
+                            <div class="cta-text">
+                                <h4>Correo Electrónico</h4>
+                                <span>squash.warriors.pe@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-content pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-logo">
+                                <a href="index.html"><img src="./img/logo_3-transformed.png" class="img-fluid" alt="logo"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                        <div class="footer-social-icon" style="margin-top: 90px;">
+                            <span>Síguenos!</span>
+                            <a href="#"><i class="fab fa-facebook facebook-bg"></i></a>
+                            <a href="https://www.instagram.com/squash_warriors.pe/"><i class="fab fa-instagram instagram-bg"></i></a>
+                            <a href="#"><i class="fab fa-youtube youtube-bg"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                        <div class="footer-widget">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 text-center text-lg-center">
+                        <div class="copyright-text">
+                            <p>Copyright &copy; DevpCok 2023, Todos los derechos reservados</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
