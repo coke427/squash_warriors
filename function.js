@@ -25,3 +25,8 @@ $(document).ready(function(){
       })
     })
   })
+
+  // Inicializa el carrusel cuando se carga la página
+$(document).ready(function () {
+  $('#carouselExampleFade').carousel();
+});

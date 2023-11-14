@@ -16,6 +16,7 @@
     width: 100%;
     transform: translate3d(-100%, 0, 0);
     transition: 0.3s all ease-in-out;
+    z-index: 2000;
   }
   .navbar-responsive:after {
     content: "";
@@ -53,8 +54,13 @@
   }
   
   .navbar {
-    box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.25);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que el navbar esté por encima del carrusel */
     background-color: #fff;
+    box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.25);
   }
   .navbar .navbar__wrapper {
     width: 90%;
@@ -107,42 +113,72 @@
   .after-transform a.active:after, .after-transform a:hover:after {
     transform: scaleX(1) translateZ(0);
   }
-  
-  /* Icon 3 */
-  #nav-icon3 {
-    width: 30px;
-    height: calc(100%/2);
-    position: relative;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-    -webkit-transition: 0.5s ease-in-out;
-    -moz-transition: 0.5s ease-in-out;
-    -o-transition: 0.5s ease-in-out;
-    transition: 0.5s ease-in-out;
-    cursor: pointer;
+
+/* Estilos base para el contenedor de la imagen */
+.image-container {
+  position: relative;
+  overflow: hidden; /* Esconde cualquier parte de la imagen que exceda el contenedor */
+}
+
+/* Estilos responsivos para las imágenes del carrusel */
+.img__carousel {
+  width: 100%; /* Asegura que la imagen ocupe el ancho completo del contenedor */
+  height: auto; /* Ajusta la altura automáticamente para mantener la relación de aspecto */
+  object-fit: cover; /* Cubre el área del contenedor sin distorsionarse */
+}
+
+/* Estilos para el logo que se mantendrá en la misma posición y tamaño relativo */
+.image-container img[src*="logo_3-transformed.png"] {
+  position: absolute;
+  top: 5vh; /* Posición desde arriba basada en la altura de la ventana */
+  left: 50%; /* Centrado horizontalmente */
+  transform: translateX(-50%); /* Ajuste para centrar exactamente el logo en la mitad */
+  width: 15vw; /* Ancho del logo basado en el ancho de la ventana */
+  z-index: 20; /* Asegúrate de que el logo se muestre sobre los otros elementos */
+}
+
+/* Estilos para el texto que se mantendrá en la misma posición y tamaño relativo */
+#texto1, #texto2 {
+  position: absolute;
+  z-index: 10;
+  color: white; /* Asegúrate de que el color del texto sea visible sobre la imagen */
+  font-size: 3vw; /* Tamaño de fuente basado en el ancho de la ventana */
+  /* Ajusta los valores de top y left para posicionar el texto según tu diseño */
+}
+
+/* Ajuste específico para #texto1 */
+#texto1 {
+  top: 20%; /* Posición vertical relativa */
+  left: 10%; /* Posición horizontal relativa */
+}
+
+/* Ajuste específico para #texto2, centrado en la pantalla */
+#texto2 {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Ajuste para centrar exactamente el texto en la pantalla */
+}
+
+/* Consultas de medios para ajustes en pantallas más pequeñas */
+@media (max-width: 768px) {
+  .image-container {
+      height: 50vh; /* Altura más pequeña para contenedores en dispositivos móviles */
   }
-  
-  #nav-icon3 span {
-    display: none;
-    position: absolute;
-    height: 5px;
-    width: 100%;
-    background: #777;
-    border-radius: 9px;
-    opacity: 1;
-    left: 0;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-    -webkit-transition: 0.25s ease-in-out;
-    -moz-transition: 0.25s ease-in-out;
-    -o-transition: 0.25s ease-in-out;
-    transition: 0.25s ease-in-out;
+
+  #texto1, #texto2 {
+      font-size: 5vw; /* Tamaño de fuente más grande para mejorar la legibilidad en pantallas pequeñas */
   }
-  
+
+  .image-container img[src*="logo_3-transformed.png"] {
+      width: 20vw; /* Ancho más grande para el logo en pantallas pequeñas */
+      top: 10vh; /* Posición desde arriba ajustada para pantallas pequeñas */
+  }
+}
+
+
+
+
+
   #nav-icon3 span:nth-child(1) {
     top: 0px;
   }
