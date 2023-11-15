@@ -8,6 +8,11 @@
     background-color: #f5f5f5;
     font-family: "Roboto Condensed", sans-serif;
   }
+
+#titulo{
+  font-family: 'Bebas Neue', sans-serif;
+
+}
   
   .navbar-responsive {
     color: #fff;
@@ -61,9 +66,11 @@
     z-index: 1000; /* Asegura que el navbar esté por encima del carrusel */
     background-color: #fff;
     box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.25);
+    padding-left:0px !important;
+    padding-right:0px !important;
   }
   .navbar .navbar__wrapper {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
   }
   .navbar .navbar__wrapper .navbar__menu {
@@ -82,13 +89,13 @@
     display: block;
     position: relative;
     padding: 12px;
-    color: #777;
+    color: rgb(60, 60, 60);
     letter-spacing: 0.1em;
     text-decoration: none;
   }
   .navbar .navbar__wrapper .navbar__brand {
     font-weight: 700;
-    font-size: 1.2em;
+    font-size: 1.8em;
   }
   .navbar .navbar__wrapper .navbar__brand img {
     height: 100%;
@@ -209,7 +216,7 @@
 }
 
 /* Estilos responsivos para las imágenes del carrusel */
-.img__carousel {
+.img__carousel1{
   position: absolute;
   top: 0;
   left: 0;
@@ -217,12 +224,29 @@
   height: 100%; /* Alto completo del contenedor */
   object-fit: cover; /* Cubrir el área del contenedor sin distorsionarse */
 }
-
+.img__carousel2{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Ancho completo del contenedor */
+  height: 100%; /* Alto completo del contenedor */
+  object-fit: cover; /* Cubrir el área del contenedor sin distorsionarse */
+  object-position: top;
+}
 /* Estilos para el logo, usando unidades relativas para mantener el tamaño y la posición */
-.image-container img[src*="logo_3-transformed.png"] {
+#logo1 {
   position: absolute;
   top: 45%; /* Posición desde arriba en % para mantener la relación en diferentes tamaños de pantalla */
   left: 27%; /* Centrado horizontalmente */
+  transform: translate(-50%, -50%); /* Ajuste para centrar exactamente el logo */
+  width: 21%; /* Ancho del logo en % para mantener la relación en diferentes tamaños de pantalla */
+  z-index: 2; /* Asegurarse de que el logo se muestre sobre los otros elementos */
+}
+
+#logo2 {
+  position: absolute;
+  top: 72%; /* Posición desde arriba en % para mantener la relación en diferentes tamaños de pantalla */
+  left: 30%; /* Centrado horizontalmente */
   transform: translate(-50%, -50%); /* Ajuste para centrar exactamente el logo */
   width: 21%; /* Ancho del logo en % para mantener la relación en diferentes tamaños de pantalla */
   z-index: 2; /* Asegurarse de que el logo se muestre sobre los otros elementos */
@@ -241,6 +265,20 @@
   white-space: nowrap; /* Evitar que el texto se ajuste y permanezca en una sola línea */
   
 }
+
+#texto2 h1 {
+  position: absolute;
+  top: 38%; /* Posición vertical en % para mantener la relación */
+  left: 31%; /* Centrado horizontalmente */
+  transform: translate(-50%, -50%); /* Ajuste para centrar exactamente el texto */
+  font-size: 3vw; /* Tamaño de fuente basado en el ancho de la ventana */
+  color: white; /* Color del texto visible sobre la imagen */
+  font-family: Lato;
+  z-index: 1;
+  white-space: nowrap; /* Evitar que el texto se ajuste y permanezca en una sola línea */
+  
+}
+
 
 /* Elimina los estilos de media query que cambian el tamaño de los elementos
    ya que queremos que todo escale en grupo */
@@ -315,6 +353,14 @@
 .footer p {
     margin-bottom: 0;
 }*/
+
+#hr-nosotros{
+  width: 50%; 
+  height: 3px; 
+  background-color: #F28705;
+  opacity: initial;
+}
+
 
 ul {
   margin: 0px;
@@ -579,3 +625,4 @@ p,a,h1,h2,h3,h4 {
 .section-team .single-person:hover .speciality {
 	color: #fff;
 }
+

@@ -17,6 +17,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@900&display=swap" rel="stylesheet">
 
 </head>
 
@@ -24,7 +28,7 @@
     <div class="header">
         <div class="navbar">
             <div class="navbar__wrapper">
-                <nav class="navbar__menu"><a class="navbar__brand" href="#">Brand<img src="#" alt=""/></a>
+                <nav class="navbar__menu" id="titulo"><a class="navbar__brand" href="#">Squash Warriors<img src="#" alt=""/></a>
                     <div id="nav-icon3"><span></span><span></span><span></span><span></span></div>
                     <ul class="navbar__nav">
                         <li class="navbar__link after-transform"><a class="active" href="#">Inicio</a></li>
@@ -53,41 +57,52 @@
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <div class="image-container">
-                    <img src="img/c1.jpg" class="d-block w-100 img__carousel" alt="image00001">
+                    <img src="img/c1.jpg" class="d-block w-100 img__carousel1" alt="image1">
                     <div class="overlay"></div>
-                    <img src="img/logo_3-transformed.png">
+                    <img id="logo1" src="img/logo_3-transformed.png">
                     <div id="texto1">
                         <h1>TRAIN HARD OR GO HOME BBY</h1>
                     </div>
                 </div>
             </div>
-            <!-- <div class="carousel-item">
+            <div class="carousel-item">
                 <div class="image-container">
-                    <img src="img/c2.jpg"  class="d-block w-100 img__carousel" alt="giaco1">
+                    <img src="img/c2.jpg" class="d-block w-100 img__carousel2" alt="image2">
                     <div class="overlay"></div>
-                    <div id="texto2" >
-                        <h1>Titulo de la Imagen 1</h1>
+                    <img id="logo2" src="img/logo_3-transformed.png">
+                    <div id="texto2">
+                        <h1>YOU DON’T GET WHAT YOU WISH FOR
+                        <br>YOU GET WHAT YOU WORK FOR</h1>
                     </div>
                 </div>
-            </div> -->
-
+            </div>
+            <!-- Agrega más elementos carousel-item aquí si es necesario -->
         </div>
 
+        <!-- Controles -->
+        <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </a>
     </div>
     <!----------------------------------------------------------------------------------------------->
     
     <section id="nosotros" class="py-5">
         <div class="container">
           <h2 class="text-center mb-4">Nosotros</h2>
-          <hr class="mx-auto mb-5" style="width: 50%; height: 3px; background-color: #023E73;">
+          <hr class="mx-auto mb-5" id="hr-nosotros">
           <div class="row" style="padding-top: 6%;">
             <div class="col-md-6">
               <h3 class="mb-3">Misión</h3>
-              <p style="text-align: left;" class="mb-4">Estamos enfocados en cumplir con calidad los compromisos asumidos con nuestros clientes buscando superar sus expectativas, ofreciéndoles continua y oportunamente soluciones de mejora en asesoramiento financiero, contable y TI.</p>
+              <p id="parrafo1"   style="text-align: left;" class="mb-4">Cultivar la pasión por el squash en jugadores juveniles, brindándoles oportunidades de entrenamiento de primera y competencias desafiantes. Nos esforzamos por crear un entorno inclusivo y motivador que aliente a nuestros atletas a alcanzar su máximo potencial, tanto en habilidades de juego como en fortaleza mental y física.</p>
             </div>
             <div class="col-md-6">
               <h3 class="mb-3">Visión</h3>
-              <p style="text-align: left;" class="mb-4">Ser líderes en asesoramiento a entidades en crecimiento de primer nivel y a los ejecutivos que las conducen en el norte de nuestro país.</p>
+              <p id="parrafo1" style="text-align: left;" class="mb-4">Ser reconocidos como un equipo de squash junior de primera línea que no solo produce jugadores competitivos en el panorama nacional e internacional, sino que también inculca valores de por vida. Aspiramos a ser un semillero para el talento de squash del futuro en Perú.</p>
             </div>
           </div>
         </div>
@@ -188,6 +203,29 @@
                 </div>
             </div>
         </section>
+    
+
+        <section>
+            <h2 class="text-center mb-4">Auspiciadores</h2>
+            <hr class="mx-auto mb-5" id="hr-nosotros">
+            <div class ="row" style="justify-content:center">
+                <div class="col-md-2">
+                 <img src="img/Logo Aquamiel.png" alt="" style="width: 90%;">
+                </div>
+                <div class="col-md-2">
+                    <img src="img/Logo Canvax .PNG" alt="" style="width: 90%; ">
+                   </div>
+                <div class="col-md-2">
+                    <img src="img/SOLEOL LOGO PERU-1.png" alt="" style="width: 90%; margin-top: 12px; ">
+                </div>
+                <div class="col-md-2">
+                    <img src="img/LOGO.png" alt="" style="width: 90%;">
+                </div>
+            </div>
+        </section>
+
+
+
 
     <footer class="footer-section" id="footer">
         <div class="container">
