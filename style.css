@@ -117,63 +117,49 @@
 /* Estilos base para el contenedor de la imagen */
 .image-container {
   position: relative;
-  overflow: hidden; /* Esconde cualquier parte de la imagen que exceda el contenedor */
+  width: 100%; /* La imagen ocupa el ancho completo del contenedor */
+  /* Asegúrate de que el contenedor de la imagen tenga un aspecto ratio específico */
+  padding-top: 50.25%; /* Porcentaje para un aspecto de 16:9 - ajusta según sea necesario */
+  height: 0; /* Esto permite mantener la proporción del contenedor */
 }
 
 /* Estilos responsivos para las imágenes del carrusel */
 .img__carousel {
-  width: 100%; /* Asegura que la imagen ocupe el ancho completo del contenedor */
-  height: auto; /* Ajusta la altura automáticamente para mantener la relación de aspecto */
-  object-fit: cover; /* Cubre el área del contenedor sin distorsionarse */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Ancho completo del contenedor */
+  height: 100%; /* Alto completo del contenedor */
+  object-fit: cover; /* Cubrir el área del contenedor sin distorsionarse */
 }
 
-/* Estilos para el logo que se mantendrá en la misma posición y tamaño relativo */
+/* Estilos para el logo, usando unidades relativas para mantener el tamaño y la posición */
 .image-container img[src*="logo_3-transformed.png"] {
   position: absolute;
-  top: 5vh; /* Posición desde arriba basada en la altura de la ventana */
-  left: 50%; /* Centrado horizontalmente */
-  transform: translateX(-50%); /* Ajuste para centrar exactamente el logo en la mitad */
-  width: 15vw; /* Ancho del logo basado en el ancho de la ventana */
-  z-index: 20; /* Asegúrate de que el logo se muestre sobre los otros elementos */
+  top: 45%; /* Posición desde arriba en % para mantener la relación en diferentes tamaños de pantalla */
+  left: 27%; /* Centrado horizontalmente */
+  transform: translate(-50%, -50%); /* Ajuste para centrar exactamente el logo */
+  width: 21%; /* Ancho del logo en % para mantener la relación en diferentes tamaños de pantalla */
+  z-index: 2; /* Asegurarse de que el logo se muestre sobre los otros elementos */
 }
 
 /* Estilos para el texto que se mantendrá en la misma posición y tamaño relativo */
-#texto1, #texto2 {
+#texto1 h1 {
   position: absolute;
-  z-index: 10;
-  color: white; /* Asegúrate de que el color del texto sea visible sobre la imagen */
+  top: 16%; /* Posición vertical en % para mantener la relación */
+  left: 34%; /* Centrado horizontalmente */
+  transform: translate(-50%, -50%); /* Ajuste para centrar exactamente el texto */
   font-size: 3vw; /* Tamaño de fuente basado en el ancho de la ventana */
-  /* Ajusta los valores de top y left para posicionar el texto según tu diseño */
+  color: white; /* Color del texto visible sobre la imagen */
+  font-family: Lato;
+  z-index: 1;
+  white-space: nowrap; /* Evitar que el texto se ajuste y permanezca en una sola línea */
+  
 }
 
-/* Ajuste específico para #texto1 */
-#texto1 {
-  top: 20%; /* Posición vertical relativa */
-  left: 10%; /* Posición horizontal relativa */
-}
+/* Elimina los estilos de media query que cambian el tamaño de los elementos
+   ya que queremos que todo escale en grupo */
 
-/* Ajuste específico para #texto2, centrado en la pantalla */
-#texto2 {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* Ajuste para centrar exactamente el texto en la pantalla */
-}
-
-/* Consultas de medios para ajustes en pantallas más pequeñas */
-@media (max-width: 768px) {
-  .image-container {
-      height: 50vh; /* Altura más pequeña para contenedores en dispositivos móviles */
-  }
-
-  #texto1, #texto2 {
-      font-size: 5vw; /* Tamaño de fuente más grande para mejorar la legibilidad en pantallas pequeñas */
-  }
-
-  .image-container img[src*="logo_3-transformed.png"] {
-      width: 20vw; /* Ancho más grande para el logo en pantallas pequeñas */
-      top: 10vh; /* Posición desde arriba ajustada para pantallas pequeñas */
-  }
-}
 
 
 
