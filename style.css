@@ -553,9 +553,9 @@ p,a,h1,h2,h3,h4 {
     color: #F28705;
 }
 
-.section-team .header-section .title {
+.title {
     font-weight: 700;
-    font-size: 45px;
+    font-size: 40px;
 }
 
 .section-team .single-person {
