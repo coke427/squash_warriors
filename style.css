@@ -13,7 +13,9 @@
   font-family: 'Bebas Neue', sans-serif;
 
 }
-  
+  #nav-icon3 {
+    margin: 16px;
+  }
   .navbar-responsive {
     color: #fff;
     position: absolute;
@@ -52,7 +54,7 @@
     text-decoration: none;
   }
   .navbar-responsive .navbar-responsive__nav .navbar-responsive__link a:after {
-    top: 50%;
+    top: 75%;
     bottom: 0;
     left: 0;
     background-color: #fff;
@@ -117,9 +119,11 @@
     transform: scaleX(0) translateZ(0);
     transform-origin: bottom center;
   }
+
   .after-transform a.active:after, .after-transform a:hover:after {
     transform: scaleX(1) translateZ(0);
   }
+
   #nav-icon3 {
     width: 30px;
     height: calc(100%/2);
@@ -377,6 +381,7 @@ border-bottom: 1px solid #373636;
 color: #F28705;
 font-size: 30px;
 float: left;
+margin-left: 95px;
 margin-top: 8px;
 }
 .cta-text {

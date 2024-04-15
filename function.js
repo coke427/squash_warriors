@@ -30,3 +30,7 @@ $(document).ready(function(){
 $(document).ready(function () {
   $('#carouselExampleFade').carousel();
 });
+
+$(document).ready(function(){
+
+});
