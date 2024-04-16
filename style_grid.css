@@ -45,9 +45,7 @@
         width: 90%;
         grid-template-columns: repeat(1, 1fr);
     }
-    .container-img .box-img img{
-        height: 200px;
-    }
+
 }
 
 
